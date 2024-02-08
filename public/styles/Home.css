@@ -1,0 +1,824 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+body{
+    width: 100%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+.background{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.form-section{
+    width: 1000px;
+    background: #fff;
+    height: 620px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+/* form-left */
+.form-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* form-right */
+.form-right{
+    width: 500px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.right-con{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 100%;
+}
+.closeBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: rgb(231, 231, 231);
+    font-size: 2rem;
+    border-radius: 0 0 0 10px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.closeBtn:hover{
+    background-color: rgb(255, 105, 50);
+    color: #fff;
+}
+.sw-con{
+    width: 150px;
+    background: rgb(231, 231, 231);
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 15px 5px;
+    border-radius: 10px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.active{
+    color: white;
+}
+.register,
+.login{
+    font-size: 1rem;
+    background: transparent;
+    z-index: 99;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.slider{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 105, 50);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+
+.moveslider{
+    left: 75px;
+}
+
+.form-con{
+    height: 500px;
+    width: 1000px;
+    padding: 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    position: relative;
+    gap: 40px;
+    transition: 0.5s ease-in-out;
+    left: 0px;
+}
+
+.form-move{
+    left: -500px;
+}
+
+/* register-form */
+.register-box,
+.login-box{
+    width: 100%;
+    height: 100%;
+}
+.input-row{
+    display: flex;
+    gap: 15px;
+}
+.input-row input,
+.input-col input,
+.input-col textarea{
+    color: black;
+    background: rgb(237, 237, 237);
+    width: 100%;
+    padding:10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+.input-col textarea{
+    resize: none; max-height: 100px;
+}
+.submit-btn{
+    width: 100%;
+    background: rgb(255, 105, 50);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+.already-title{
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+.already-title a {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.or{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+.social-icon{
+    font-size: 3rem;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.social-icon i:hover{
+    transform: scale(1.2);
+    transition: .8s;
+}
+
+/* login-form */
+.login-control{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.checkbox span{
+    margin-left: 5px;
+}
+.login-control a{
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.createAccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.createAccount a{
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ----------------------------------Top-Nav------------------------------------------ */
+.nav-top{
+    background: rgb(33, 32, 32);
+}
+.container{
+    width: 80%;
+    /* border: 2px dashed red; */
+    margin: 0 auto;   
+}
+.top-box{
+    width: 100%;
+    display: flex;
+    padding: 7px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.bar-contact{
+    color: #fff;
+}
+.bar-contact i {
+    cursor: pointer;
+}
+.bar-social i{
+    cursor: pointer;
+}
+.bar-contact span{
+    margin: 0 30px 0 15px;
+}
+.bar-social{
+    display: flex;
+    gap: 15px;
+}
+.bar-contact span,
+.bar-social span{
+    font-size: 0.8rem;
+}
+/* ----------------------------------Nav Bar------------------------------------------ */
+
+.nav-bar{
+    width: 100%;
+}
+.logo span{
+    font-size: 1.7rem;
+    color: black;
+    font-weight: bolder;
+    margin: 0 15px;
+}
+.logo i {
+    font-size: 1.7rem;
+    color: rgb(255, 105, 50);
+}
+.manubar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.manu-list{
+    display: flex;
+}
+.manu-list li a {
+    font-size: 1.2rem;
+    display: inline-block;
+    padding:20px 15px;
+    color: black;
+    transition: all .2s ease;
+}
+.manu-list li a:hover{
+    background-color: rgb(243, 74, 7);
+    color: white;
+}
+.cart{
+    display: flex;
+    gap: 20px;
+}
+.box1{
+    padding: 10px 15px;
+    background: rgb(220, 218, 218);
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+.amount-cart{
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    background-color:rgb(245, 84, 26);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+}
+.box2{
+    padding: 10px 15px;
+    background: rgb(220, 218, 218);
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+.box1:hover,
+.box2:hover{
+    background-color: rgb(255, 105, 50);
+}
+
+/* -----------------------------Slider Page-----------------------------------------*/
+header.slideshow{
+    background: rgb(220, 218, 218);
+    height: 90vh;
+    width: 100%;
+}
+.swiper-wrapper{
+    height: 100%;
+    position: relative;
+}
+.swiper{
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+}
+.swiper .swiper-slide{
+    position: relative;
+}
+.background-swiper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(164, 164, 164, 0.5);
+}
+.swiper .swiper-slide .slide-box1{
+    position: relative;
+}
+.swiper .swiper-wrapper .text-box{
+    position: absolute;
+    top: 25vh;
+    left: 25vh;
+    width: 500px;
+}
+.slideBtn{
+    padding: 15px 30px;
+    background: rgb(255, 105, 50);
+    border-radius: 5px;
+    margin: 15px 0 ;
+    color: white;
+    font-size: 1rem;
+    transition: .5s;
+    cursor: pointer;
+}
+.slideBtn:hover{
+    background-color:rgb(241, 79, 21) ;
+}
+.slideBtn.loginBtn{
+    background: white;
+    color: rgb(255, 105, 50);
+    margin-left: 15px;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next{
+    color: #fff;
+    font-size: 1rem;
+    padding: 20px 30px;
+    background: rgb(255, 105, 50);
+    transition: .5s;
+}
+.swiper .swiper-button-prev:hover,
+.swiper .swiper-button-next:hover{
+    background-color:rgb(241, 79, 21) ;
+}
+.swiper .swiper-button-next:after,
+.swiper .swiper-button-prev:after{
+    font-size: 1.8rem;
+}
+.swiper .swiper-pagination-bullet-active{
+    background: rgb(255, 105, 50);
+}
+/* ------------------------------Promotion Grid--------------------------------------*/
+
+.promotion-header{
+    margin: 40px 0 20px;
+    background: rgb(237, 237, 237);
+    border-left: 8px solid orangered;
+    padding: 10px;
+}
+.promotion-header marquee{
+    margin: -5px 0;
+}
+.promotion-header marquee span{
+    margin: 0 0 0 200px;
+}
+.title-content{
+    background: rgb(220, 218, 218);
+    padding: 10px 0;
+}
+.promotion-con{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 500px;
+    padding-bottom: 80px;
+}
+.main-item{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.promotion-img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.background-promotion{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.detail-pro{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 100%;
+    color: #fff;
+}
+.proBtn{
+    padding: 10px 20px;
+    background: rgb(255, 105, 50);
+    border-radius: 5px;
+    margin-top: 15px ;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: .5s;
+}
+.proBtn:hover{
+    background: rgb(239, 74, 14); 
+}
+.section-item{
+    width: 50%;
+    height: 100%;
+}
+.item-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    height: 100%;
+}
+.grid{
+    width: 100%;
+    height: 100%;
+    position: relative; 
+    overflow: hidden;
+}
+.detail-grid{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 80%;
+    color: #fff; 
+}
+
+.main-item:hover .promotion-img{
+    transform: scale(1.1);
+}
+.grid:hover .promotion-img{
+    transform: scale(1.1);
+}
+.promotion-img {
+    transition: .5s ease-in-out;
+}
+
+/* ------------------------------Produce Grid--------------------------------------*/
+.product-con{
+    /* background: green; */
+    padding: 0 0 150px 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+}
+.product-box{
+    position: relative;
+    width: 100% 
+}
+.product-img{
+    width: 100% ;
+    height: 300px;
+    object-fit: cover;
+}
+.product-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all .4s ease;
+    text-align: center;
+}
+.product-box h2{opacity: 0; font-size: 30px;}
+.product-box h2 a{color: white;}
+.product-box:hover .product-content{
+    background: rgb(0, 0, 0,.9);
+}
+.product-box:hover h2{
+    cursor: pointer;
+    opacity: 1;
+}
+.product-box h2 a:hover{color: orangered;}
+
+/* ------------------------------Popular product--------------------------------------*/
+.pop-box{
+    background: rgb(220, 218, 218);
+    padding: 60px 0;
+}
+.title-pop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+}
+.title-pop h1{
+    margin-bottom: 20px;
+}
+.pop-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+}
+.pop-list{
+    width: 100%;
+    height: 380px;
+}
+.pop-img{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.pop-img img{
+    transition: .5s ease-in-out;
+}
+.viewPd {
+    width: 130px;
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px ;
+    border-radius: 15px;
+    color: black;
+    opacity: 0;
+    transition: .4s ease-in-out;
+}
+.viewPd a{
+    color: black;
+}
+.viewPd:hover{
+    color: white;
+    background: black;
+}
+.viewPd:hover a{
+    color: white;
+}
+.pop-list:hover .viewPd{
+    bottom: 60px;
+    opacity: 1;
+}
+.pop-list:hover img{
+    transform: scale(1.1);
+}
+.pop-img{
+    height: 80%;
+}
+.pop-detail{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.pop-detail h3{
+    margin-bottom: 15px;
+}
+.viewBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.viewBtn button{
+    color: white;
+    background: rgb(255, 105, 50);
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .5s;
+}
+.viewBtn button:hover{
+    background: rgb(239, 74, 14);  
+}
+
+/* ------------------------------Vip service--------------------------------------*/
+.vip-box{
+    width: 100%;
+    height: 350px;
+}
+.vip-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.vip-content img{
+    object-fit: cover;
+}
+.grey-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-vip{
+    width: 500px;  
+    text-align: center;
+}
+.title-vip h1{
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.vipBtn{
+    color: white;
+    background: black;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+.vipBtn:hover{
+    color: rgb(218, 218, 72);
+}
+
+/* ------------------------------Our Blog--------------------------------------*/
+header.blog-box{
+    margin: 80px 0;
+}
+.title-blog{
+   width: 500px;
+   text-align: center;
+   margin: 80px auto;
+}
+.title-blog h1 {
+    font-size: 2.5rem;
+}
+.title-blog p{
+    margin: 20px 0;
+}
+.content-blog{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.chart1{
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.cart-img img{ 
+    width: 100%;
+    height: 100%;
+}
+.viewBl{
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background:rgb(255, 105, 50);
+    font-size: 14px;
+    padding: 5px;
+    transition: .5s;
+}
+.viewBl a {
+    color: white;
+}
+.viewBl:hover {
+    background-color: white;
+}
+.viewBl:hover a{
+    color: rgb(255, 105, 50);
+}
+.chart1:hover .viewBl{
+    top: 0;
+}
+.cart-content h3{
+    transition: .5s;
+}
+.chart1:hover .cart-content h3{
+    color: rgb(255, 105, 50);
+}
+.chart1 p {
+    margin: 10px 0 20px;
+}
+.cart-content{
+    width: 100%;
+}
+.cart-content p{
+    margin: 20px 0;
+    color: #adadad;
+}
+/* ------------------------------Footer--------------------------------------*/
+.footer{
+    background: rgb(32, 32, 32);
+    color: #fff;
+}
+.footer-con{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.item-con{
+    padding: 60px 0 40px;
+}
+.title-item h3{
+    margin: 30px 0;
+}
+.item-list a {
+    color: #999999;
+    font-size: 1rem;
+    transition: .5s;
+}
+.item-list a:hover{
+    color: rgb(255, 105, 50);;
+}
+.item-list li{
+    margin: 10px 0;
+}
+.item-con.item-last{
+    width: 270px;
+}
+.item-list p {
+    color: #999999;
+    font-size: 1rem;
+    margin: 10px 0;
+}   
+.item-list.footer-input input{
+    padding: 10px;
+    background: transparent;
+    font-size: 1rem;
+    border-bottom: 1px solid #999999;;
+    color: #fff;
+    font-size: 1rem;
+}
+.item-list.footer-input{
+    display: flex;
+    flex-direction: column;
+}
+.subBtn{
+    margin: 20px 0;
+    color: white;
+    background: rgb(255, 105, 50);
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+.subBtn:hover{
+    background: rgb(239, 74, 14); 
+}
+.underline{
+    width: 100%;
+    height: 0.5px;
+    background: #727272;
+    margin: 20  px 0;
+}
+.credit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0 30px;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #727272;
+    padding-bottom: 80px;
+}
